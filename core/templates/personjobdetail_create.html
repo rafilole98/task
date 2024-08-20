@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}PersonJobDetail Create{% endblock %}
+
+{% block content %} 
+
+<main class="text-body-dark"> 
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-12">
+            <h4>Create New PersonJobDetail</h4>
+            <form method='POST' enctype="multipart/form-data">
+                {% csrf_token %}
+
+
+                <label class="small font-weight-bold">{{ personjobdetail_form.person.label}}</label>
+    {{ personjobdetail_form.person }}
+    <label class="small font-weight-bold">{{ personjobdetail_form.job.label}}</label>
+    {{ personjobdetail_form.job }}
+    <label class="small font-weight-bold">{{ personjobdetail_form.salary.label}}</label>
+    {{ personjobdetail_form.salary }}
+    <label class="small font-weight-bold">{{ personjobdetail_form.years_of_experince.label}}</label>
+    {{ personjobdetail_form.years_of_experince }}
+
+
+
+    <button class="btn btn-success btn-block py-2 mb-4 mt-5 fw-bold w-100" type="submit" value="Create PersonJobDetail">Create</button>
+    <hr class="mb-3">
+                    
+
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</main>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+

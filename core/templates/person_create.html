@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Person Create{% endblock %}
+
+{% block content %} 
+
+<main class="text-body-dark"> 
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-12">
+            <h4>Create New Person</h4>
+            <form method='POST' enctype="multipart/form-data">
+                {% csrf_token %}
+
+
+                <label class="small font-weight-bold">{{ person_form.first_name.label}}</label>
+    {{ person_form.first_name }}
+    <label class="small font-weight-bold">{{ person_form.last_name.label}}</label>
+    {{ person_form.last_name }}
+    <label class="small font-weight-bold">{{ person_form.address.label}}</label>
+    {{ person_form.address }}
+    <label class="small font-weight-bold">{{ person_form.mobile.label}}</label>
+    {{ person_form.mobile }}
+
+
+
+    <button class="btn btn-success btn-block py-2 mb-4 mt-5 fw-bold w-100" type="submit" value="Create Person">Create</button>
+    <hr class="mb-3">
+                    
+
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</main>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
